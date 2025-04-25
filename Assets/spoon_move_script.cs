@@ -5,10 +5,6 @@ public class pipe_move_script : MonoBehaviour
     public float moveSpeed = 5;
 
     public float deadZone = -7;
-    void Start()
-    {
-
-    }
 
     void Update()
     {

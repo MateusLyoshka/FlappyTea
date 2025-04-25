@@ -2,22 +2,34 @@ using UnityEngine;
 
 public class cup_script : MonoBehaviour
 {
-    public Rigidbody2D myRigidBody;
+    public Rigidbody2D teaCup;
     public float flapStrength;
     public logic_script logic;
     public bool cupIsAlive = true;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private int topDeadZone = 4;
+
     void Start()
     {
         logic = GameObject.FindGameObjectWithTag("logic").GetComponent<logic_script>();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        deadZoneNotEntered();
         if (Input.GetKeyDown(KeyCode.Space) == true && cupIsAlive)
         {
-            myRigidBody.linearVelocity = Vector2.up * flapStrength;
+            teaCup.linearVelocity = Vector2.up * flapStrength;
+        }
+    }
+
+    private void deadZoneNotEntered()
+    {
+        int bottomDeadZone = -topDeadZone;
+        if (teaCup.transform.position.y > topDeadZone || teaCup.transform.position.y < bottomDeadZone)
+        {
+            logic.gameOver();
+            cupIsAlive = false;
         }
     }
 

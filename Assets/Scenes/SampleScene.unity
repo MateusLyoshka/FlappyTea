@@ -1105,8 +1105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec62ec2114b2d944ea09b97785626d43, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  myRigidBody: {fileID: 1837095818}
+  teaCup: {fileID: 1837095818}
   flapStrength: 8
+  logic: {fileID: 1485139361}
+  cupIsAlive: 1
 --- !u!1 &2035900632
 GameObject:
   m_ObjectHideFlags: 0

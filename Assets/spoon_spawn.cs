@@ -6,13 +6,13 @@ public class spoon_spawn : MonoBehaviour
     public float spawnRate = 2;
     private float timer = 0;
     public float hightOffset = 1;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+
     void Start()
     {
         spawnPipe();
     }
 
-    // Update is called once per frame
+
     void Update()
     {
         if (timer < spawnRate)
