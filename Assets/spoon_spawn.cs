@@ -3,7 +3,7 @@ using UnityEngine;
 public class spoon_spawn : MonoBehaviour
 {
     public GameObject spoon;
-    public float spawnRate = 2;
+    public float spawnRate = 0.5f;
     private float timer = 0;
     public float hightOffset = 1;
 
